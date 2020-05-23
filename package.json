@@ -1,16 +1,38 @@
 {
   "name": "@kuckboy/node-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "server upload",
-  "main": "index.js",
+  "main": "build/index.js",
   "homepage": "https://github.com/kuckboy1994/node-upload",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint lib --ext=.ts",
+    "lint:fix": "eslint --fix lib --ext=.ts",
+    "dev": "tsnd lib/index.ts",
+    "build": "tsc -v && tsc"
   },
   "keywords": [
     "node",
     "upload"
   ],
-  "author": "kuckboy1994",
-  "license": "ISC"
+  "author": "kuckboy1994<shanchao@qq.com>",
+  "license": "MIT",
+  "prettier": "@kuckboy/prettier-config",
+  "devDependencies": {
+    "@kuckboy/prettier-config": "^0.0.1",
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "3.7.5"
+  }
 }
